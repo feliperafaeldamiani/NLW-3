@@ -1,0 +1,29 @@
+/*oq é uma regra css?*/
+/*https://www.notion.so/Front-end-010548f316d04d65a0d8b72865874ed1*/
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body {
+    
+    height: 100vh; 
+    color: white;
+}   
+
+:root {
+    font-size: 62.5%; /*= 10px pois 100% é igual a 16px (padrão do navegador)*/
+}
+
+
+body, input, button, textarea {
+    font-weight: 400;
+    font-size: 1.8rem; /* medida 'em' referencia o padrão do tag pai  e 'rem' em relação ao :root*/
+    line-height: 1;
+    font-family: 'Nunito', sans-serif;
+    /*outra opção de escrita equivalente = font: 400 1.8rem/1 'Nunito', sans-serif;*/ 
+    
+
+}
