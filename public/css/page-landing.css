@@ -1,13 +1,13 @@
 #page-landing {
   background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
   text-align: center;
-  min-height: 100vh;
-  display: flex; /*alinha todos filhos da caixa lado a lado, independente de block ou inline*/
+  min-height: 100vh; /* vh: view port height = altura total da janela */
+  display: flex; /*alinha lado a lado todos filhos da caixa , independente de block ou inline*/
 }
 
 #container {
   margin: auto; /*conseguira alinhar em todas dimensões se houver display: flex*/
-  width: 90%;
+  width: min(90%, 112rem);
 }
 
 .location,
@@ -15,6 +15,27 @@ h1,
 .visit p {
   /*detalhe da declaracao q está incluindos todos tag <p> q estão dentro da classe visit*/
   height: 16vh;
+}
+
+#logo {
+  animation-delay: 50ms;
+}
+
+.location {
+  animation-delay: 100ms;
+}
+
+main h1 {
+  font-size: clamp(
+    4rem,
+    8vw,
+    8.4rem
+  ); /*clamp define limites min ex max (vw: view port witdh)*/
+  animation-delay: 150ms;
+}
+
+.visit p {
+  animation-delay: 200ms;
 }
 
 .visit a {
@@ -28,29 +49,57 @@ h1,
   justify-content: center;
   margin: auto;
   transition: background 200ms;
+  animation-delay: 250ms;
 }
 
 .visit a:hover {
-    background: #96feff;
-
+  background: #96feff;
 }
 
-#logo {
-  animation-delay: 50ms;
-}
+/* desktop version */
+@media (min-width: 760px) {
+  /* rotina para quando a largura for no minimo de 760px para cima*/
+  #container {
+    padding: 5rem 2rem;
+    /* estrutura => shorthand background: image repeat position / size */
+    background: url("../images/bg.svg") no-repeat 80% /
+      clamp(30rem, 54vw, 56rem);
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*disponivel somente na presenca de display: flex or grid*/
+  }
+  .location,
+  h1,
+  .visit p {
+    height: initial;
+    text-align: initial;
+  }
+  .location {
+    font-size: 2.4rem;
+    text-align: right;
+    line-height: 1.5;
+  }
+  main h1 {
+    font-weight: bold;
+    line-height: 0.88;
+    margin: clamp(10%, 9vh, 12%) 0 4rem; /*margin (acima dir abaixo esq): ciclo horario do relogio*/
+    width: min(300px, 80%);
+  }
 
-.location {
-  animation-delay: 100ms;
-}
+  .visit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .visit p {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    width: clamp(20rem, 20vw, 30rem);
+  }
 
-main h1 {
-  animation-delay: 150ms;
-}
-
-.visit p {
-  animation-delay: 200ms;
-}
-
-.visit a {
-  animation-delay: 250ms;
+  .visit a {
+    margin: initial;
+  }
 }

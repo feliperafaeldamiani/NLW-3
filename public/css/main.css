@@ -3,6 +3,8 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; 
+    /*por padrão é content-box, oq resulta na total da caixa sendo a soma do conteudo + padding, já c border-box ele vai de uma borda a outra*/
 
 }
 
@@ -11,6 +13,7 @@ body {
     
     height: 100vh; 
     color: white;
+    background:#ebf2f5;
 }   
 
 :root {
@@ -23,7 +26,8 @@ body, input, button, textarea {
     font-size: 1.8rem; /* medida 'em' referencia o padrão do tag pai  e 'rem' em relação ao :root*/
     line-height: 1;
     font-family: 'Nunito', sans-serif;
-    /*outra opção de escrita equivalente = font: 400 1.8rem/1 'Nunito', sans-serif;*/ 
+    /*outra opção de escrita equivalente*/
+    /* font: 400 1.8rem/1 'Nunito', sans-serif;  */
     
 
 }
