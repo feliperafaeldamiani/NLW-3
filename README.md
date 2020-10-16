@@ -1,3 +1,3 @@
 # NLW-3
-Aulas do workshop do NLW#3 (trilha iniciante) da Rocketseat
+Aulas da Trilha Discovery do Workshop NLW#3 da Rocketseat
 Link da descrição do projeto: https://www.notion.so/NLW-Discovery-03-628a2c1b9ac744e28fad80046b699aab
