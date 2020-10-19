@@ -1,0 +1,40 @@
+#page-create-orphanage {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+#page-create-orphanage h1 {
+  position: absolute;
+  height: 28px;
+  left: 40.22%;
+  right: 40.49%;
+  top: 20px;
+  
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+
+  color: #8FA7B3;
+   
+}
+
+main {
+  flex: 1;
+}
+
+.map-container {
+  margin: 0 0 4rem;
+}
+.map-container .leaflet-container {
+  border-radius: 20px 20px 0 0;
+  border: 1px solid #DDE3F0;
+  
+}
+
+.map-container footer {
+  background: #f5f8fa;
+  border-radius: 0 0 20px 20px;
+}
